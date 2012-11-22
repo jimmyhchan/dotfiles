@@ -12,7 +12,6 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-filetype plugin indent on
 Bundle 'gmarik/vundle'
 
 Bundle 'tpope/vim-surround'
@@ -51,6 +50,7 @@ colorscheme wombat
 " Bundle "Zenburn"
 " colorscheme zenburn
 
+filetype plugin indent on
 
 " }}}
 " Basic options --------------------------------------------------------------- {{{
