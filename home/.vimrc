@@ -21,6 +21,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'delimitMate.vim'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-unimpaired'
 
 
 
@@ -37,7 +38,7 @@ Bundle 'gillesruppert/jshint.vim'
 "  snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "honza/snipmate-snippets"
+Bundle "honza/vim-snippets"
 Bundle "garbas/vim-snipmate"
 
 "  colorscheme
@@ -102,7 +103,7 @@ set formatoptions=qrn1
 " }}}
 " Status line {{{
 
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
+" set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
 
 " }}}
 " Backups {{{
@@ -125,7 +126,6 @@ set backup                        " enable backups
 
 syntax on
 set background=dark
-colorscheme murphy
 
 " }}}
 
@@ -225,7 +225,7 @@ noremap <leader>g <C-w>v<C-w>l
 " }}}
 " Folding --------------------------------------------------------------------- {{{
 
-"set foldlevelstart=-1
+set foldlevelstart=20
 
 " Space to toggle folds.
 nnoremap <Space> za
@@ -876,3 +876,4 @@ endif
 
 
 " }}}
+
