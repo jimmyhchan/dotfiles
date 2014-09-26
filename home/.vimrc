@@ -11,47 +11,47 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
+call vundle#begin()
+Plugin 'gmarik/vundle'
 
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/syntastic'
-Bundle 'kien/ctrlp.vim'
-Bundle 'delimitMate.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'delimitMate.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'tpope/vim-unimpaired'
 
 
 
 "  language specific
-Bundle 'jimmyhchan/dustjs.vim'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'juvenn/mustache.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'skammer/vim-css-color'
+Plugin 'jimmyhchan/dustjs.vim'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'juvenn/mustache.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'skammer/vim-css-color'
 
 " syntastic
-Bundle 'gillesruppert/jshint.vim'
+Plugin 'gillesruppert/jshint.vim'
 
-"  snipmate
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "honza/vim-snippets"
-Bundle "garbas/vim-snipmate"
+"  snippets
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 "  colorscheme
-" Bundle "tomasr/molokai"
-" colorscheme molokai
-Bundle "Wombat"
-colorscheme wombat
-" Bundle "jellybeans.vim"
-" colorscheme jellybeans
-" Bundle "Zenburn"
-" colorscheme zenburn
+" Plugin 'tomasr/molokai'
+Plugin 'Wombat'
+" Plugin 'jellybeans.vim'
+" Plugin 'Zenburn'
 
+call vundle#end()
 filetype plugin indent on
+
+" colorscheme molokai
+colorscheme wombat
+" colorscheme jellybeans
+" colorscheme zenburn
 
 " }}}
 " Basic options --------------------------------------------------------------- {{{
