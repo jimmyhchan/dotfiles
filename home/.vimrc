@@ -18,11 +18,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
-Plugin 'kien/ctrlp.vim'
 Plugin 'delimitMate.vim'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'tpope/vim-unimpaired'
-
 
 
 "  language specific
@@ -38,6 +36,10 @@ Plugin 'gillesruppert/jshint.vim'
 "  snippets
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+
+" fuzzy search
+Bundle 'Shougo/vimproc.vim'
+Bundle 'Shougo/unite.vim'
 
 "  colorscheme
 " Plugin 'tomasr/molokai'
@@ -86,6 +88,9 @@ set wildignore+=*.pyc,.hg,.git
 set matchtime=3
 set showbreak=↪
 
+" allow dash and dollar sign to be part of words
+set iskeyword+=\$,-
+
 " Save when losing focus
 " au FocusLost * :wa
 
@@ -133,10 +138,6 @@ set background=dark
 " Useful abbreviations -------------------------------------------------------- {{{
 
 " iabbrev ldis ಠ_ಠ
-" iabbrev sl/ http://stevelosh.com/
-" iabbrev bb/ http://bitbucket.org/
-" iabbrev bbs/ http://bitbucket.org/sjl/
-" iabbrev sl@ steve@stevelosh.com
 
 " }}}
 " Searching and movement ------------------------------------------------------ {{{
@@ -151,9 +152,6 @@ set smartcase
 set incsearch
 set showmatch
 set hlsearch
-
-" this is too confusing
-" set gdefault
 
 set virtualedit+=block
 
@@ -765,9 +763,9 @@ endif
    "nnoremap <F2> :set nonumber! <CR>
    
    " tabnew   tabnext tabprev
-   "nnoremap <F3> <C-PAGEDOWN>
-   "nnoremap <F4> <C-PAGEUP>
-   "nnoremap <F7> :tabnew
+   nnoremap <F3> :tabprev<CR>
+   nnoremap <F4> :tabnext<CR>
+   nnoremap <S-F3> :bp<CR>
    nnoremap <S-F4> :bn<CR>
    nnoremap <F7> :tabnew
 
@@ -840,9 +838,20 @@ endif
   inoremap <Tab> <C-R>=Mosh_Tab_Or_Complete()<CR>
 
 " }}}
+" Unite ---------------------------------------------------------------------- {{{
+"  see unite-example documentation
+  nnoremap <leader>f :<C-u>Unite -start-insert file<CR>
+  call unite#filters#matcher_default#use(['matcher_fuzzy'])
+  nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
+  " nnoremap <leader>m :<C-u>Unite file_mru<CR>
+  nnoremap <silent> <leader>b :<C-u>Unite buffer file_mru bookmark -quick-match<CR>
+  let g:unite_source_history_yank_enable = 1
+  nnoremap <leader>y :<C-u>Unite history/yank<CR>
+  nnoremap <leader>a :<C-u>Unite grep:.<CR>
+" }}}
 " LinkedIn ---------------------------------------------------------------------- {{{
-   "NerdComments for JSPs 
-   let g:NERDCustomDelimiters = {'jsp': { 'left': '<% /*', 'right': '*/ %>', 'leftAlt': '<%--', 'rightAlt': '--%>' }}
+   "NerdComments for JSPs  and dust
+   let g:NERDCustomDelimiters = { 'jsp': { 'left': '<% /*', 'right': '*/ %>', 'leftAlt': '<%--', 'rightAlt': '--%>' }, 'dustjs': { 'left': '{!', 'right': '!}' } }
 
 " }}}
 " JSP ---------------------------------------------------------------------- {{{
