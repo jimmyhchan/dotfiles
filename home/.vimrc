@@ -28,7 +28,6 @@ Plugin 'jimmyhchan/dustjs.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'juvenn/mustache.vim'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'skammer/vim-css-color'
 
 " syntastic
 Plugin 'gillesruppert/jshint.vim'
