@@ -10,9 +10,9 @@
 "vundle 
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
@@ -106,11 +106,6 @@ set formatoptions=qrn1
 "set colorcolumn=+1
 
 " }}}
-" Status line {{{
-
-" set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
-
-" }}}
 " Backups {{{
 
 if has('gui_macvim')
@@ -121,23 +116,12 @@ set directory=~/.vim/tmp/swap//   " swap files
 set backup                        " enable backups
 
 " }}}
-" Leader {{{
-
-"let mapleader = ","
-"let maplocalleader = "\\"
-
-" }}}
 " Color scheme {{{
 
 syntax on
 set background=dark
 
 " }}}
-
-" }}}
-" Useful abbreviations -------------------------------------------------------- {{{
-
-" iabbrev ldis ಠ_ಠ
 
 " }}}
 " Searching and movement ------------------------------------------------------ {{{
