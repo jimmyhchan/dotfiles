@@ -70,8 +70,6 @@ set cursorline
 set ttyfast
 set ruler
 set backspace=indent,eol,start
-"set nonumber
-"set norelativenumber
 set laststatus=2
 set history=1000
 if has('gui_macvim')
@@ -90,8 +88,6 @@ set showbreak=↪
 " allow dash and dollar sign to be part of words
 set iskeyword+=\$,-
 
-" Save when losing focus
-" au FocusLost * :wa
 
 " Tabs, spaces, wrapping {{{
 
@@ -138,8 +134,6 @@ set hlsearch
 
 set virtualedit+=block
 
-"map <leader><space> :noh<cr>
-
 runtime macros/matchit.vim
 map <tab> %
 
@@ -161,6 +155,10 @@ inoremap <c-e> <esc>A
 
 " Open a Quickfix window for the last search
 nnoremap <silent> <leader>/ :execute 'vimgrep /'.@/.'/g %'<CR>:copen<CR>
+
+"enable the mouse & features
+set mouse=a
+set selectmode-=mouse "Use the mouse just like visual mode, so you can use vim commands on mouse selections, eg. 'x' to cut and 'y' to yank
 
 " Error navigation {{{
 "
@@ -206,7 +204,7 @@ noremap <leader>g <C-w>v<C-w>l
 " }}}
 " Folding --------------------------------------------------------------------- {{{
 
-set foldlevelstart=20
+set nofoldenable " make sure the code is not folded when first opened, zi to toggle
 
 " Space to toggle folds.
 nnoremap <Space> za
@@ -236,22 +234,6 @@ inoremap # X<BS>#
 " }}}
 " Various filetype-specific stuff --------------------------------------------- {{{
 
-" Cram {{{
-
-au BufNewFile,BufRead *.t set filetype=cram
-
-let cram_fold=1
-autocmd Syntax cram setlocal foldlevel=1
-
-" }}}
-" Clojure {{{
-
-au FileType clojure call TurnOnClojureFolding()
-
-" Eval toplevel form, even when you're on the opening paren.
-au FileType clojure nmap <localleader>ee 0;\et
-
-" }}}
 " C {{{
 
 au FileType c setlocal foldmethod=syntax
