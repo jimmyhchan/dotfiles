@@ -38,19 +38,19 @@ Plugin 'honza/vim-snippets'
 
 " fuzzy search
 Bundle 'Shougo/vimproc.vim'
-Bundle 'Shougo/unite.vim'
+" Bundle 'Shougo/unite.vim'
 
 "  colorscheme
-" Plugin 'tomasr/molokai'
-Plugin 'Wombat'
+Plugin 'tomasr/molokai'
+" Plugin 'Wombat'
 " Plugin 'jellybeans.vim'
 " Plugin 'Zenburn'
 
 call vundle#end()
 filetype plugin indent on
 
-" colorscheme molokai
-colorscheme wombat
+colorscheme molokai
+" colorscheme wombat
 " colorscheme jellybeans
 " colorscheme zenburn
 
