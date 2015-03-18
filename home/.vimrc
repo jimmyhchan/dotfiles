@@ -23,7 +23,6 @@ Plugin 'tpope/vim-unimpaired'
 
 "  language specific
 Plugin 'jimmyhchan/dustjs.vim'
-Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'juvenn/mustache.vim'
 Plugin 'kchmck/vim-coffee-script'
 
@@ -35,7 +34,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " fuzzy search
-Bundle 'Shougo/vimproc.vim'
+" Bundle 'Shougo/vimproc.vim'
 " Bundle 'Shougo/unite.vim'
 
 "  colorscheme
