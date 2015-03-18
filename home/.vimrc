@@ -18,8 +18,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
-Plugin 'delimitMate.vim'
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'tpope/vim-unimpaired'
 
 
@@ -474,6 +472,9 @@ let g:microdata_attributes_complete = 0
 let g:atia_attributes_complete = 0
 
 " }}}
+" UTILSNIP {{{
+let g:UltiSnipsListSnippets="<C-r><tab>"
+" }}}
 " Rope {{{
 
 let ropevim_enable_shortcuts = 0
@@ -805,14 +806,14 @@ endif
 " }}}
 " Unite ---------------------------------------------------------------------- {{{
 "  see unite-example documentation
-  nnoremap <leader>f :<C-u>Unite -start-insert file<CR>
-  call unite#filters#matcher_default#use(['matcher_fuzzy'])
-  nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
-  " nnoremap <leader>m :<C-u>Unite file_mru<CR>
-  nnoremap <silent> <leader>b :<C-u>Unite buffer file_mru bookmark -quick-match<CR>
-  let g:unite_source_history_yank_enable = 1
-  nnoremap <leader>y :<C-u>Unite history/yank<CR>
-  nnoremap <leader>a :<C-u>Unite grep:.<CR>
+  " nnoremap <leader>f :<C-u>Unite -start-insert file<CR>
+  " call unite#filters#matcher_default#use(['matcher_fuzzy'])
+  " nnoremap <leader>r :<C-u>Unite -start-insert file_rec/async:!<CR>
+  " " nnoremap <leader>m :<C-u>Unite file_mru<CR>
+  " nnoremap <silent> <leader>b :<C-u>Unite buffer file_mru bookmark -quick-match<CR>
+  " let g:unite_source_history_yank_enable = 1
+  " nnoremap <leader>y :<C-u>Unite history/yank<CR>
+  " nnoremap <leader>a :<C-u>Unite grep:.<CR>
 " }}}
 " LinkedIn ---------------------------------------------------------------------- {{{
    "NerdComments for JSPs  and dust
